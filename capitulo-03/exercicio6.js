@@ -8,6 +8,9 @@ var alunos = [
   { nome: "Julia", media: 9.5 },
 ];
 
-function aprovados(alunos, nota) {
-  return alunos.filter(aluno => aluno.media >= nota)
+const aprovados = (alunos, nota) => {
+  return alunos.filter(({ media }) => media >= nota)
 }
+
+const mediaFinal = aprovados(alunos, 6);
+console.log(mediaFinal);
